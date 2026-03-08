@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beat the Market</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+  <main class="container">
+    <header>
+      <h1>Beat the Market</h1>
+      <p class="subtitle">
+        Pick 3 stocks, compare against the S&amp;P 500 (SPY), and get a beginner-friendly explanation.
+      </p>
+    </header>
+
+    <section class="card api-card">
+      <h2>Live Data Setup</h2>
+      <p>Enter your Finnhub API key once. It is saved only in your browser.</p>
+      <div class="api-row">
+        <input id="api-key" type="password" placeholder="Finnhub API key" autocomplete="off" />
+        <button id="save-key-btn" class="secondary">Save Key</button>
+      </div>
+      <small class="hint">Get a free key at finnhub.io. For production, move API calls to a backend proxy.</small>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Choose 3 Stocks</h2>
+      </div>
+      <p class="hint">Search by stock or ETF name/symbol, then add exactly 3 picks.</p>
+      <div class="search-row">
+        <input id="asset-search" type="text" placeholder="Search stock or ETF (e.g., Apple, SPY, QQQ)" autocomplete="off" />
+      </div>
+      <div id="search-results" class="search-results"></div>
+      <p class="hint">Selected Picks</p>
+      <div id="selected-picks" class="selected-picks"></div>
+      <button id="play-btn">Analyze My Picks</button>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Watchlist</h2>
+      </div>
+      <p class="hint">Saved in this browser. Add from search results, then quickly pick from here.</p>
+      <div id="watchlist" class="watchlist"></div>
+    </section>
+
+    <section id="results" class="card results"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

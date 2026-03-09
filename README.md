@@ -13,12 +13,12 @@ Beat the Market is a browser-based stock game-style analyzer: choose 3 picks, ch
 - Basic risk meter based on average absolute daily change
 - Diversification summary using industry profile data
 - Market headlines section for context
-- Local watchlist (saved in browser)
+- Local watchlist 
 
 ## Tech Stack
 - HTML
 - CSS
-- Vanilla JavaScript
+- JavaScript
 - Finnhub REST API
 
 ## Project Structure
